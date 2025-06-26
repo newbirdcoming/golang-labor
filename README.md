@@ -15,6 +15,23 @@
   - 日志切割与归档
   - 日志级别与格式自定义
 
+### gomock-test
+
+- **简介**：该目录演示了如何使用 [gomock](https://blog.csdn.net/LanJieZhiFu/article/details/148769776?sharetype=blogdetail&sharerId=148769776&sharerefer=PC&sharesource=LanJieZhiFu&spm=1011.2480.3001.8118) 进行 Go 接口的单元测试与 mock 代码生成。
+- **主要内容**：
+  - `person/`：定义需要 mock 的接口
+  - `mocks/`：通过 mockgen 工具生成的 mock 实现
+  - `student/`：依赖接口的业务结构体及其单元测试
+- **用法简述**：
+  1. 安装依赖：  
+     `go get github.com/golang/mock/gomock`  
+     `go install github.com/golang/mock/mockgen@latest`
+  2. 生成 mock 代码：  
+     `go generate ./...`
+  3. 运行测试：  
+     `go test ./student`
+- **相关博客**：如有对应博客可补充链接
+
 ---
 
 后续会持续补充更多 CSDN 博客源码及其目录说明，欢迎关注与交流！
